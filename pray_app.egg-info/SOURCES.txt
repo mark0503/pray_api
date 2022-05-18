@@ -1,0 +1,8 @@
+setup.py
+app/main.py
+pray_app.egg-info/PKG-INFO
+pray_app.egg-info/SOURCES.txt
+pray_app.egg-info/dependency_links.txt
+pray_app.egg-info/requires.txt
+pray_app.egg-info/top_level.txt
+script/create_db.py
