@@ -1,13 +1,7 @@
-from fastapi import FastAPI
 from fastapi_utils.tasks import repeat_every
 
-from app.handlers import router, check_status_pray
-
-
-def get_application() -> FastAPI:
-    application = FastAPI()
-    application.include_router(router=router)
-    return application
+from app.core import get_application
+from app.handlers import check_status_pray
 
 
 app = get_application()

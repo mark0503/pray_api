@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, Enum, Column, Integer, String, ForeignKey, ARRAY
 from sqlalchemy.ext.declarative import declarative_base
 
-DATABASE_URL = f"postgresql://postgres:postgres@127.0.0.1:5432/fast_db"
+from app.config import DATABASE_URL
 
 Base = declarative_base()
 

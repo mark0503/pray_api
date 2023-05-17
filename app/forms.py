@@ -18,4 +18,3 @@ class PrayCreateForm(BaseModel):
     live_names: list
     rip_names: list
     typing: str
-

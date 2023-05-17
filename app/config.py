@@ -1,10 +1,13 @@
 import os
-from starlette.config import Config
-from starlette.datastructures import CommaSeparatedStrings, Secret
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-root_dir = dir_path[:-3]
-config = Config(f"{root_dir}.env")
 
-DATABASE_URL = f"postgresql://postgres:postgres@127.0.0.1:5432/praydb"
-SECRET_KEY = "ergthyjukijuhygfd-regrfgthjyukihynbgf"
+DB_NAME = os.environ.get('db_name')
+DB_USER = os.environ.get('user')
+DB_PASSWORD = os.environ.get('password')
+DB_HOST = os.environ.get('host')
+DB_PORT = os.environ.get('port')
+
+
+SECRET_KEY = os.environ.get('hash_password')
+
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
